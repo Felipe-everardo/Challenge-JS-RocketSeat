@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/assets/logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>Mundo Pet</title>
+<link rel="icon" href="logo.svg"><script defer src="main.js"></script></head>
+
+<body>
+    <div class="logo">
+        <img src="./src/assets/logo.svg" alt="">MUNDO PET
+    </div>
+    <main>
+        <div class="cabecalho">
+            <div>
+                <h1>Sua agenda</h1>
+                <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+            </div>
+            <div class="input">
+                <input type="date" name="date" id="date" required>
+            </div>
+        </div>
+
+        <section>
+            <header>
+                <div class="periodo">
+                    <img src="src/assets/manha.svg" alt="">
+                    <h3>Manhã</h3>
+                </div>
+                <span>09h-12h</span>
+            </header>
+
+            <div class="schedule-container">
+                <div class="schedule">
+                    <div class="schedule-info">
+                        <p>09:00</p>
+                        <p>Thor / Fernanda Costa</p>
+                    </div>
+                    <p>Vacinação</p>
+                    <p>Remover agendamento</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <header>
+                <div class="periodo">
+                    <img src="src/assets/tarde.svg" alt="">
+                    <h3>Tarde</h3>
+                </div>
+                <span>13h-18h</span>
+            </header>
+
+            <div class="schedule-container">
+                <div class="schedule">
+                    <div class="schedule-info">
+                        <p>13:00</p>
+                        <p>Mel / João Souza</p>
+                    </div>
+                    <p>Corte de Unha</p>
+                    <p>Remover agendamento</p>
+                </div>
+
+                <div class="schedule">
+                    <div class="schedule-info">
+                        <p>14:00</p>
+                        <p>Bella / Pedro Martins</p>
+                    </div>
+                    <p>Aplicação de Anti-pulgas</p>
+                    <p>Remover agendamento</p>
+                </div>
+
+                <div class="schedule">
+                    <div class="schedule-info">
+                        <p>15:00</p>
+                        <p>Simba / Jupana Rocha</p>
+                    </div>
+                    <p>Tosa Higiênica</p>
+                    <p>Remover agendamento</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <header>
+                <div class="periodo">
+                    <img src="src/assets/noite.svg" alt="">
+                    <h3>Noite</h3>
+                </div>
+                <span>19h-21h</span>
+            </header>
+            <div class="schedule-container">
+                <div class="schedule">
+                    <div class="schedule-info">
+                        <p>09:00</p>
+                        <p>Max / Camila Santos</p>
+                    </div>
+                    <p>Limpeza de Dentes</p>
+                    <p>Remover agendamento</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botão para abrir o diálogo -->
+        <button type="button" id="newScheduleBtn">NOVO AGENDAMENTO</button>
+    </main>
+
+    <!-- Diálogo para agendamento -->
+    <dialog role="dialog" aria-labelledby="modal-title">
+        <h2 id="modal-title">Agende um atendimento</h2>
+        <p>Preencha os dados do cliente para realizar o agendamento:</p>
+
+        <form>
+            <label for="icon-name">Nome do tutor</label>
+            <input type="text" id="icon-name" placeholder="Helena Souza" class="icon-name">
+
+            <label for="icon-pet">Nome do pet</label>
+            <input type="text" id="icon-pet" placeholder="Cheddar" class="icon-pet">
+
+            <label for="icon-tel">Telefone</label>
+            <input type="tel" id="icon-tel" placeholder="(00) 0 0000-0000" class="icon-tel">
+
+            <label for="descricao">Descrição do serviço</label>
+            <textarea id="descricao" rows="4" cols="50" placeholder="Descreva o serviço"></textarea>
+
+            <div class="day-modal">
+                <div>
+                    <label for="date-modal">Data</label>
+                    <input type="date" id="date-modal">
+                </div>
+
+                <div>
+                    <label for="time-modal">Hora</label>
+                    <input type="time" id="time-modal" value="12:00">
+                </div>
+            </div>
+
+            <div class="btn-schedule">
+                <button type="submit" class="btn-schedule">AGENDAR</button>
+                <!-- Botão para fechar o diálogo -->
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Script -->
+    <script src="src/main.js" type="module"></script>
+</body>
+
+</html>

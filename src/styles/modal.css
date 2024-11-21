@@ -1,0 +1,118 @@
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3rem;
+    z-index: 1001;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    background-color: #23242C;
+    color: white;
+
+    & p {
+        padding: .5rem 0 1rem 0;
+        font-size: 14px;
+        color: var(--content-secondary);
+    }
+
+    & label {
+        padding: 1rem 0 .5rem 0;
+    }
+
+    & input {
+        font-size: 22px;
+        font-family: var(--inter-font);
+        color: var(--content-secondary);
+        margin-bottom: 1rem;
+    }
+}
+
+textarea {
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    text-indent: 1.5rem;
+    padding-top: .5rem;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(5px);
+    /* Aplica o desfoque */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.icon-name {
+    background-image: url('../assets/icon-name.svg');
+}
+
+.icon-pet {
+    background-image: url('../assets/icon-pet.svg');
+}
+
+.icon-tel {
+    background-image: url('../assets/icon-tel.svg');
+}
+
+.icon-name,
+.icon-pet,
+.icon-tel {
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    text-indent: 1.5rem;
+    padding: .5rem;
+    background-color: transparent;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 10px;
+}
+
+.day-modal {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+
+    & div {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+    }
+  
+    & #time-modal {
+        background-image: url('../assets/time.svg');
+        background-repeat: no-repeat;
+        background-position: 5px center;
+        
+        text-indent: 1.5rem;
+    }
+
+    #date-modal,
+    #time-modal {
+        padding: .5rem;
+        border-radius: 10px;
+        font-size: 20px;
+        background-color: transparent;
+        color: white;
+    }
+}
+
+.btn-schedule {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    border: none;
+    gap: 1rem;
+
+    & button {
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        background-color: #9282fa;
+        font-size: 16px;
+        color: black;
+        font-weight: bold;
+    }
+}
