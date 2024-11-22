@@ -24,7 +24,7 @@
                 <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
             </div>
             <div class="input">
-                <input type="date" name="date" id="date" required>
+                <i><input type="date" name="date" id="date" required></i>
             </div>
         </div>
 
@@ -113,43 +113,41 @@
     </main>
 
     <!-- Diálogo para agendamento -->
-    <dialog role="dialog" aria-labelledby="modal-title">
+    <dialog id="scheduleDialog" role="dialog" aria-labelledby="modal-title">
         <h2 id="modal-title">Agende um atendimento</h2>
         <p>Preencha os dados do cliente para realizar o agendamento:</p>
 
         <form>
             <label for="icon-name">Nome do tutor</label>
-            <input type="text" id="icon-name" placeholder="Helena Souza" class="icon-name">
+            <input type="text" id="iconName" placeholder="Helena Souza" class="icon-name" required>
 
             <label for="icon-pet">Nome do pet</label>
-            <input type="text" id="icon-pet" placeholder="Cheddar" class="icon-pet">
+            <input type="text" id="iconPet" placeholder="Cheddar" class="icon-pet" required>
 
             <label for="icon-tel">Telefone</label>
-            <input type="tel" id="icon-tel" placeholder="(00) 0 0000-0000" class="icon-tel">
+            <input type="tel" id="iconTel" placeholder="(00) 0 0000-0000" class="icon-tel" required> 
 
             <label for="descricao">Descrição do serviço</label>
-            <textarea id="descricao" rows="4" cols="50" placeholder="Descreva o serviço"></textarea>
+            <textarea id="descricao" rows="4" cols="50" placeholder="Descreva o serviço" required></textarea>
 
             <div class="day-modal">
                 <div>
                     <label for="date-modal">Data</label>
-                    <input type="date" id="date-modal">
+                    <input type="date" id="date-modal" required>
                 </div>
 
                 <div>
                     <label for="time-modal">Hora</label>
-                    <input type="time" id="time-modal" value="12:00">
+                    <input type="time" id="time-modal" value="12:00" required>
                 </div>
             </div>
 
             <div class="btn-schedule">
                 <button type="submit" class="btn-schedule">AGENDAR</button>
-                <!-- Botão para fechar o diálogo -->
             </div>
         </form>
     </dialog>
 
-    <!-- Script -->
     <script src="src/main.js" type="module"></script>
 </body>
 

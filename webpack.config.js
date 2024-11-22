@@ -4,8 +4,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 // npm install --save-dev webpack-cli
 
-// npm install --save-dev babel-loader @babel/core @babel/preset-env
-
 //   "scripts": {
 //   "build": "webpack",
 //   "dev": "webpack serve",
@@ -58,6 +56,8 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
       },
+
+      // npm install --save-dev babel-loader @babel/core @babel/preset-env
       {
         test: /\.js$/,
         exclude: /node_modules/,

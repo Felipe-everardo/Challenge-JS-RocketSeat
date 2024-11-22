@@ -1,15 +1,17 @@
 "use strict"
 
+import dayjs from "dayjs"
+
 // CSS
 import "./styles/global.css"
 import "./styles/modal.css"
 import "./styles/schedules.css"
 import "./styles/temas.css"
 
-import { setupModal } from './js/modules/modal.js'
+// Configuração do dayJs
+import "./libs/dayjs.js"
+console.log(dayjs().format("HH:mm"));
 
-const submit = document.querySelector('#newScheduleBtn')
-
-submit.addEventListener('click', () => {
-  setupModal()
-})
+// JS
+import "./modules/modal/modal.js"
+import "./modules/form/submit.js"
