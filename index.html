@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <section>
+        <section id="manha">
             <header>
                 <div class="periodo">
                     <img src="src/assets/manha.svg" alt="">
@@ -37,7 +37,7 @@
                 <span>09h-12h</span>
             </header>
 
-            <div class="schedule-container">
+            <!-- <div class="schedule-container">
                 <div class="schedule">
                     <div class="schedule-info">
                         <p>09:00</p>
@@ -46,7 +46,7 @@
                     <p>Vacinação</p>
                     <p>Remover agendamento</p>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section>
@@ -58,7 +58,7 @@
                 <span>13h-18h</span>
             </header>
 
-            <div class="schedule-container">
+            <!-- <div class="schedule-container">
                 <div class="schedule">
                     <div class="schedule-info">
                         <p>13:00</p>
@@ -67,7 +67,7 @@
                     <p>Corte de Unha</p>
                     <p>Remover agendamento</p>
                 </div>
-
+                
                 <div class="schedule">
                     <div class="schedule-info">
                         <p>14:00</p>
@@ -85,7 +85,7 @@
                     <p>Tosa Higiênica</p>
                     <p>Remover agendamento</p>
                 </div>
-            </div>
+            </div>  -->
         </section>
 
         <section>
@@ -96,7 +96,8 @@
                 </div>
                 <span>19h-21h</span>
             </header>
-            <div class="schedule-container">
+
+            <!-- <div class="schedule-container">
                 <div class="schedule">
                     <div class="schedule-info">
                         <p>09:00</p>
@@ -105,14 +106,14 @@
                     <p>Limpeza de Dentes</p>
                     <p>Remover agendamento</p>
                 </div>
-            </div>
+            </div> -->
         </section>
 
-        <!-- Botão para abrir o diálogo -->
+
         <button type="button" id="newScheduleBtn">NOVO AGENDAMENTO</button>
     </main>
 
-    <!-- Diálogo para agendamento -->
+
     <dialog id="scheduleDialog" role="dialog" aria-labelledby="modal-title">
         <h2 id="modal-title">Agende um atendimento</h2>
         <p>Preencha os dados do cliente para realizar o agendamento:</p>
@@ -125,7 +126,7 @@
             <input type="text" id="iconPet" placeholder="Cheddar" class="icon-pet" required>
 
             <label for="icon-tel">Telefone</label>
-            <input type="tel" id="iconTel" placeholder="(00) 0 0000-0000" class="icon-tel" required> 
+            <input type="tel" id="iconTel" placeholder="(00) 0 0000-0000" class="icon-tel" required>
 
             <label for="descricao">Descrição do serviço</label>
             <textarea id="descricao" rows="4" cols="50" placeholder="Descreva o serviço" required></textarea>

@@ -1,38 +1,46 @@
-import dayjs from "dayjs"
-const frm = document.querySelector('form')
-const dialog = document.querySelector('dialog')
-const modalDate = document.querySelector('#date-modal')
-const selectedDate = document.querySelector('#date')
+import dayjs from "dayjs";
+import { newSchedule } from "../../services/newSchedule.js";
 
+const frm = document.querySelector("form");
+const dialog = document.querySelector("dialog");
+const modalDate = document.querySelector("#date-modal");
+const selectedDate = document.querySelector("#date");
 
-// Carregando a data atual
-const today = dayjs(new Date()).format('YYYY-MM-DD')
-selectedDate.value = today
-selectedDate.min = today
+// Carrega a data atual e define valores mínimos
+const today = dayjs(new Date()).format("YYYY-MM-DD");
+selectedDate.value = today;
+selectedDate.min = today;
 
-modalDate.value = today
-modalDate.min = today
+modalDate.value = today;
+modalDate.min = today;
 
-frm.addEventListener('submit', (e) => {
+frm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const id = new Date().getTime()
-  const name = frm.iconName.value
-  const pet = frm.iconPet.value
-  const tel = frm.iconTel.value
-  const descr = frm.descricao.value
+  try {
+    const formData = {
+      id: new Date().getTime(),
+      name: frm.iconName.value.trim(),
+      pet: frm.iconPet.value.trim(),
+      tel: frm.iconTel.value.trim(),
+      descr: frm.descricao.value.trim(),
+      day: modalDate.value,
+      hour: document.querySelector("#time-modal").value,
+    };
 
-  const dados = {
-    id: id,
-    name: name,
-    pet: pet,
-    tel: tel,
-    descr: descr
+    // Validação simples (opcional)
+    if (Object.values(formData).some((value) => !value)) {
+      throw new Error("Todos os campos devem ser preenchidos.");
+    }
+
+    // Faz o agendamento
+    await newSchedule(formData);
+
+    // Exibe mensagem de sucesso no submit
+    alert("Agendamento realizado com sucesso!");
+    dialog.close();
+  } catch (error) {
+    console.error("Erro ao realizar o agendamento:", error);
+    alert(`Erro: ${error.message}`);
   }
-
-  console.log(dados);
-  
-  dialog.close();
 });
-
-

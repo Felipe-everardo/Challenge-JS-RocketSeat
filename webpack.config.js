@@ -28,7 +28,7 @@ module.exports = {
     },
     port: 3000,
     open: true, // Faz com que o Webpack Dev Server abra automaticamente o navegador na URL 
-    liveReload: true, // Habilita o recurso de live reloading, que atualiza automaticamente a página no navegador 
+    liveReload: true, // Habilita o recurso de live reloading, que atualiza automaticamente a página no navegador
   },
 
   // npm i html-webpack-plugin@latest --save-dev

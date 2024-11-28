@@ -2,6 +2,7 @@
   "name": "petshop",
   "description": "Challenge-RocketSeat",
   "author": "Felipe Everardo",
+  "main": "src/main.js",
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
