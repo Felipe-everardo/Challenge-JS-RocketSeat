@@ -15,3 +15,4 @@ console.log(dayjs().format("HH:mm"));
 // JS
 import "./modules/modal/modal.js"
 import "./modules/form/submit.js"
+import "./modules/load/page-load.js"

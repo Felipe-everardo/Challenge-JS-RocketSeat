@@ -1,13 +1,13 @@
-import {apiConfig} from "./api-config.js"
+import { apiConfig } from "./api-config.js"
 
-export async function newSchedule({ id, name, pet, tel, descr, day, hour}) {
+export async function newSchedule({ id, name, pet, tel, descr, when}) {
   try {
     await fetch(`${apiConfig.baseURL}/agendamentos`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({id, name, pet, tel, descr, day, hour}),
+      body: JSON.stringify({id, name, pet, tel, descr, when}),
     })
 
     alert('Agendamento realizado com sucesso!')

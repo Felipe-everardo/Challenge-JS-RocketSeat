@@ -1,31 +1,28 @@
 {
   "agendamentos": [
     {
-      "id": 1732830423032,
-      "name": "teste",
-      "pet": "teste",
-      "tel": "teste",
-      "descr": "teste",
-      "day": "2024-11-28",
-      "hour": "20:01"
+      "id": 1733166717881,
+      "name": "teste1",
+      "pet": "teste1",
+      "tel": "teste1",
+      "descr": "teste1",
+      "when": "2024-12-02T20:00:00.000Z"
     },
     {
-      "id": 1732831076290,
-      "name": "teste",
-      "pet": "teste",
-      "tel": "teste",
-      "descr": "teste",
-      "day": "2024-11-28",
-      "hour": "20:01"
+      "id": 1733166772864,
+      "name": "teste2",
+      "pet": "teste2",
+      "tel": "teste2",
+      "descr": "teste2",
+      "when": "2024-12-02T11:00:00.000Z"
     },
     {
-      "id": 1732831233410,
-      "name": "teste",
-      "pet": "teste",
-      "tel": "teste",
-      "descr": "teste",
-      "day": "2024-11-28",
-      "hour": "20:01"
+      "id": 1733166798711,
+      "name": "teste3",
+      "pet": "teste3",
+      "tel": "teste3",
+      "descr": "teste3",
+      "when": "2024-12-02T23:00:00.000Z"
     }
   ]
 }
